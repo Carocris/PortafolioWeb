@@ -26,6 +26,7 @@ nav {
     margin-left: 100px;
     margin-right: 120px;
     margin-top: 25px;
+    
 }
 
 nav ul {
@@ -39,14 +40,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #84878b;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #a3a3a3; /* Color del texto en hover y cuando está activo */
+    color: #442e80; /* Color del texto en hover y cuando está activo */
+}
+
+a{
+    color: #7648d7;
+    text-decoration: none;
 }
 
 
@@ -56,7 +62,7 @@ nav ul li a.active {
     align-items: center;
     padding: 50px 100px;
     background-color: rgb(9,14,22);
-    margin-top: 30px;
+    margin-top: 150px;
 }
 
 .home-content {
@@ -64,16 +70,36 @@ nav ul li a.active {
     text-align: left;
 }
 
-.home-content p {
-    margin: 0 0 15px;
-    font-size: 14px;
-    color: #808080;
-}
+
 
 .home-content h1 {
     font-size: 36px;
     margin-bottom: 2px;
 }
+
+.saludo-container {
+    margin-bottom: 10px;
+    margin-top: 20px;   
+
+  }
+  
+.saludo-text {
+    margin-top: 20px;   
+    margin: 0 0 15px;
+    font-size: 16px;
+    color: #7b4ae2;
+    background-color:#14142b;
+    padding: 8px 16px;
+    border-radius: 19px;
+    display: inline-block;
+
+}
+
+.presentacion{
+    padding: 10px 0 0 ;
+    color: #84878b;
+}
+
 
 .icons {
     margin: 18px 0;
@@ -95,16 +121,15 @@ nav ul li a.active {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #232323;
-    border-radius: 50%;
     width: 300px;
     height: 300px;
     margin: 0 auto;
 }
 
 .home-image-container img {
-    border-radius: 50%; /* Hace la imagen redonda */
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+    box-shadow: 0 0 18px 18px rgba(98, 0, 234, 0.5);
+    border-radius: 100%; /* Hace la imagen redonda */
+    width: 150%; /* Asegura que la imagen ocupe todo el contenedor */
     height: auto;
     z-index: 1; /* Asegura que la imagen esté por encima de cualquier fondo o ícono */
 }
@@ -112,45 +137,117 @@ nav ul li a.active {
 .home-image-container::before {
     content: '';
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background-color: rgba(98, 0, 234, 0.15); /* Color de fondo morado con opacidad */
+    width: 450px;
+    height: 450px;
+    background-color: rgba(115, 16, 255, 0.15); /* Color de fondo morado con opacidad */
     border-radius: 50%; /* Círculo */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centra el círculo */
-    z-index: 0; /* Coloca el círculo detrás de la imagen */
+    z-index: 1; /* Coloca el círculo detrás de la imagen */
 }
 
-.floating-icon {
-    position: absolute;
-    color: #645785;
-    background-color: #1b1735; /* Fondo del círculo */
-    border-radius: 50%; /* Hace que el fondo sea circular */
-    width: 44px; /* Tamaño del círculo */
-    height: 40px; /* Tamaño del círculo */
+.icono-bg {
+    background-color: rgba(41, 40, 40, 0.5); /* Gris semitransparente */
+    border-radius: 50%; /* Círculo perfecto */
+    padding: 20px; /* Espacio interno para dar la apariencia de círculo alrededor del icono */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
-    transition: transform 0.3s ease-in-out;
 }
 
-.floating-icon:nth-child(2) {
-    font-size: 40px;
-    top: 15%;
-    left: 0;
+
+/* Posición y Tamaño en Pantallas Grandes (Desktop) */
+.icono-flotante {
+    position: absolute;
+    z-index: 3;
+    transition: transform 0.5s ease; /* Añade una transición suave */
 }
 
-.floating-icon:nth-child(3) {
-    font-size: 40px;
-    bottom: 15%;
-    left: 0;
+
+.icono-flotante:hover {
+    transform: rotate(360deg); /* Gira el ícono 360 grados */
 }
 
-.floating-icon:nth-child(4) {
-    font-size: 35px;
-    right: 0;
+/* Posición del icono de React */
+.react-icon {
+    top: 31%;
+    right: 57%;
+}
+
+/* Posición del icono de Java */
+.java-icon {
+    top: 50%;
+    right: 35%;
+}
+
+/* Posición del icono de Figma */
+.figma-icon {
+    bottom: 20%;
+    left: 35%;
+}
+
+/* Tamaño de íconos en pantallas grandes */
+.react-icon-size, .java-icon-size, .figma-icon-size {
+    width: 50px;
+    height: 50px;
+}
+
+/* Iconos Responsividad para pantallas medianas (Tablets) */
+@media (max-width: 1070px) {
+    .icono-flotante {
+        top: auto;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .react-icon {
+        top: 70%;
+        right: 50%; /* Ajusta para centrar el icono */
+    }
+
+    .java-icon {
+        top: 40%;
+        left: 10%; /* Ajusta para centrar el icono */
+    }
+
+    .figma-icon {
+        top: 60%;
+        left: 50%; /* Ajusta para centrar el icono */
+    }
+
+    /* Tamaño de íconos en pantallas medianas */
+    .react-icon-size, .java-icon-size, .figma-icon-size {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsividad para pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+    .icono-flotante {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .react-icon {
+        top: 20%;
+    }
+
+    .java-icon {
+        top: 40%;
+    }
+
+    .figma-icon {
+        top: 60%;
+    }
+
+    /* Tamaño de íconos en pantallas pequeñas */
+    .react-icon-size, .java-icon-size, .figma-icon-size {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .home-image-container:hover .floating-icon {
@@ -160,48 +257,63 @@ nav ul li a.active {
 .button-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Centra los botones horizontalmente */
     gap: 10px; /* Espacio entre los botones */
-  }
+    margin-top: 20px; /* Añade espacio arriba para bajarlo */
+}
 
-.button {
-    text-decoration: none;
+.button-download {
+    display: flex;
     align-items: center;
-    transition: background-color 0.3s ease;
-
-}
-
-.button.download{
-    
-    padding: 10px 0;
-    margin-left: 30px;
-    font-size: 14px; 
-    display: inline-flex;
-    border: none; /* Sin borde */
+    justify-content: center; /* Centra el contenido dentro del botón */
+    color: #7f62be; /* Color del texto */
     background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    padding: 10px 0; /* Ajusta el padding para el tamaño del botón */
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    width: 200px; /* Asegura que ambos botones tengan el mismo ancho */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin-left: 100px;
+    
 }
 
-.button.whatsapp {
-    background-color: #25D366; /* Color verde de WhatsApp */
-    color: white;
+.button-container i {
+    font-size: 30px;
+    margin-right: 5px;
+    color: #7f62be;
+}
+
+.button-whatsapp {
+    background-color: rgba(104, 69, 184, 0.1);  /* Fondo del botón de WhatsApp */
+    color: #7f62be;
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centra el contenido dentro del botón */
+    width: 200px; /* Asegura que ambos botones tengan el mismo ancho */
+    margin-top: -10px;
+}
+
+.button-download:hover {
+    color: #c1b2e6; /* Color al pasar el mouse sobre el botón de descarga */
+}
+
+.button-whatsapp:hover {
+    background-color: #c1b2e6; /* Color al pasar el mouse sobre el botón de WhatsApp */
+    color: #c1b2e6; /* Color al pasar el mouse sobre el botón de descarga */
+
 }
 
 
-.button i {
-    margin-right: 10px;
-    padding-top: 10;
-    font-size: 20px; /* Tamaño del icono de WhatsApp */
+.button-download:hover, .button-download:hover i {
+    color: #c1b2e6; /* Color del texto e icono al pasar el mouse */
 }
 
-.button.download:hover {
-    color: #c1b2e6; /* Color al pasar el mouse */
-}
-
-.button.whatsapp:hover {
-    background-color: #15873d; /* Color de WhatsApp al pasar el mouse */
+.button-whatsapp:hover, .button-whatsapp:hover i {
+    background-color: #7121cc; /* Color del fondo al pasar el mouse */
+    color: white; /* Cambia el color del texto y del icono al pasar el mouse */
 }
