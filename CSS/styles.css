@@ -298,17 +298,6 @@ a{
     margin-top: -10px;
 }
 
-.button-download:hover {
-    color: #c1b2e6; /* Color al pasar el mouse sobre el botón de descarga */
-}
-
-.button-whatsapp:hover {
-    background-color: #c1b2e6; /* Color al pasar el mouse sobre el botón de WhatsApp */
-    color: #c1b2e6; /* Color al pasar el mouse sobre el botón de descarga */
-
-}
-
-
 .button-download:hover, .button-download:hover i {
     color: #c1b2e6; /* Color del texto e icono al pasar el mouse */
 }
