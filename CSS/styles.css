@@ -80,20 +80,43 @@ a{
 .saludo-container {
     margin-bottom: 10px;
     margin-top: 20px;   
+}
 
-  }
-  
 .saludo-text {
     margin-top: 20px;   
     margin: 0 0 15px;
     font-size: 16px;
-    color: #7b4ae2;
-    background-color:#14142b;
+    color: rgb(123, 74, 226);
+    background-color: #14142b;
     padding: 8px 16px;
     border-radius: 19px;
     display: inline-block;
-
+    cursor: pointer;
 }
+
+.saludo-text:hover {
+    transform: scale(1.20); /* Efecto hover */
+    box-shadow: 0 10px 20px rgba(12, 28, 28, 0.3); /* Sombra para resaltar */
+}
+
+.hand-wave {
+    display: inline-block;
+    animation: none;
+}
+
+.saludo-text:hover .hand-wave {
+    animation: wave 0.6s ease-in-out infinite; /* Anima la mano solo cuando se hace hover */
+}
+
+@keyframes wave {
+    0% { transform: rotate(0deg); }
+    20% { transform: rotate(-15deg); }
+    40% { transform: rotate(10deg); }
+    60% { transform: rotate(-10deg); }
+    80% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
 
 .presentacion{
     padding: 10px 0 0 ;
@@ -306,3 +329,58 @@ a{
     background-color: #7121cc; /* Color del fondo al pasar el mouse */
     color: white; /* Cambia el color del texto y del icono al pasar el mouse */
 }
+
+/* Solid border */
+
+hr.solid{
+
+    border-top: 1px solid #7B4AE2;
+    margin-top: 80px;
+    border-color: rgba(104, 69, 184, 0.2);
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 columnas de igual tamaño */
+    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
+    padding-top: 90px !important;
+    padding: 300px; /* Espaciado interno de la sección */
+    
+}
+
+
+.grid-item {
+    background-color:#7B4AE2; 
+    color: white;
+    padding: 75px;
+    text-align: center;
+    margin: 30px;
+    border-radius: 10%;
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: #090e16;
+    border: 2px solid #2c2156;
+
+
+
+}
+
+.grid-items{
+    background-color: #7B4AE2;
+    grid-column: span 3;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin: 0px 30px 30px 30px; /* Elimina el margen superior y mantiene el margen lateral */
+    border-radius: 20px; /* Bordes más redondeados para el ítem inferior */
+    background-color: #1E1E2F;
+    border: 2px solid #2c2156;
+
+
+
+}
+
+.grid-item:hover, .grid-items:hover {
+    transform: scale(1.05); /* Efecto hover */
+    box-shadow: 0 10px 20px rgba(14, 14, 14, 0.3); /* Sombra para resaltar */
+}
+
