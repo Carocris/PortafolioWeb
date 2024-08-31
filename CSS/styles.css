@@ -4,12 +4,12 @@
 }
 
 body {
-    background-color: rgb(9,14,22); 
+    background-color: #090e16; 
     color: #FFFFFF; 
     font-family: 'Arial', sans-serif;
     width: 100%;
     height: 100vh;
-    box-sizing: border-box;
+    box-sizing: border-box;        
 }
 
 nav {
@@ -69,8 +69,6 @@ a{
     max-width: 50%;
     text-align: left;
 }
-
-
 
 .home-content h1 {
     font-size: 36px;
@@ -144,13 +142,12 @@ a{
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
     margin: 0 auto;
 }
 
 .home-image-container img {
-    box-shadow: 0 0 18px 18px rgba(98, 0, 234, 0.5);
     border-radius: 100%; /* Hace la imagen redonda */
     width: 150%; /* Asegura que la imagen ocupe todo el contenedor */
     height: auto;
@@ -160,14 +157,16 @@ a{
 .home-image-container::before {
     content: '';
     position: absolute;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     background-color: rgba(115, 16, 255, 0.15); /* Color de fondo morado con opacidad */
     border-radius: 50%; /* Círculo */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centra el círculo */
     z-index: 1; /* Coloca el círculo detrás de la imagen */
+    box-shadow: 0 0 80px 18px rgba(98, 0, 234, 0.5);
+
 }
 
 .icono-bg {
@@ -201,7 +200,7 @@ a{
 /* Posición del icono de Java */
 .java-icon {
     top: 50%;
-    right: 35%;
+    right: 37%;
 }
 
 /* Posición del icono de Figma */
@@ -341,46 +340,82 @@ hr.solid{
 
 .grid-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 columnas de igual tamaño */
-    gap: 20px; /* Espacio entre los elementos de la cuadrícula */
-    padding-top: 90px !important;
-    padding: 300px; /* Espaciado interno de la sección */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+    padding: 60px ; /* Espaciado interno de la sección */
+
+
+}
+
+.grid-item { /* Reutiliza las mismas clases para los de abajo */
+    background-color: #090e16;
+    color: white;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px ;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    border: 2px solid rgba(123, 74, 226, 0.3); /* Borde de color */
+    width: 200px;
+    margin-left: 90px
+
+
+}
+
+.grid-text h3, .grid-item1 h3 {
+    color: #b0b0b0; /* Color para el subtítulo */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.grid-text h2, .grid-item1 h2 {
+    color: white; /* Color del título */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.icon-container i {
+    font-size: 50px; /* Tamaño del ícono */
+    color: #7B4AE2; /* Color del ícono */
+    margin-bottom: 20px; /* Espacio debajo del ícono */
+}
+
+.grid-item:hover, .grid-item1:hover, .grid-items:hover {
+    transform: scale(1.05); /* Efecto hover */
+    transform: translateY(-10px); /* Eleva el ítem cuando se pasa el mouse por encima */
+    box-shadow: 0 0 25px rgba(123, 74, 226, 0.5); /* Aumenta la sombra */
+}
+
+/* Lado de abajo */
+
+.grid-items {
+    display: grid;
+    grid-column: span 3;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 10px;
+    padding: 0px; /* Elimina el padding para evitar diferencias de altura */
+    margin-top: 10px; /* Ajusta el espacio superior */
+    border: 2px solid rgba(123, 74, 226, 0.3); /* Bordes de color */
+    border-radius: 10px; /* Bordes redondeados */
     
 }
 
-
-.grid-item {
-    background-color:#7B4AE2; 
+.grid-item1 {
+    padding: 20px;
+    background-color: #090e16; /* Fondo oscuro */
     color: white;
-    padding: 75px;
     text-align: center;
-    margin: 30px;
-    border-radius: 10%;
-    border-radius: 20px; /* Bordes redondeados */
-    background-color: #090e16;
-    border: 2px solid #2c2156;
-
-
-
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
-.grid-items{
-    background-color: #7B4AE2;
-    grid-column: span 3;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    margin: 0px 30px 30px 30px; /* Elimina el margen superior y mantiene el margen lateral */
-    border-radius: 20px; /* Bordes más redondeados para el ítem inferior */
-    background-color: #1E1E2F;
-    border: 2px solid #2c2156;
-
-
-
+.grid-item1:hover {
+    transform: translateY(-10px);
+    background-color: #7648d7; /* Cambia el color de fondo al hacer hover */
+    box-shadow: 0 0 25px rgba(123, 74, 226, 0.5); /* Aumenta la sombra */
 }
 
-.grid-item:hover, .grid-items:hover {
-    transform: scale(1.05); /* Efecto hover */
-    box-shadow: 0 10px 20px rgba(14, 14, 14, 0.3); /* Sombra para resaltar */
+.grid-item1:hover h2, .grid-item1:hover h3 {
+    color: white; /* Cambia el color del texto al hacer hover */
 }
-
