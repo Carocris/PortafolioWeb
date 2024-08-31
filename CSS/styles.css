@@ -340,9 +340,11 @@ hr.solid{
 
 .grid-section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+    grid-template-columns: repeat(3, 240px); /* Fija el ancho de las tarjetas */
+    justify-content: center; /* Centra las columnas */
+    column-gap: 50px !important; /* Espacio horizontal entre columnas */
     padding: 60px ; /* Espaciado interno de la sección */
+    gap: 10px;
 
 
 }
@@ -356,11 +358,14 @@ hr.solid{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
     border: 2px solid rgba(123, 74, 226, 0.3); /* Borde de color */
+    margin: 0 auto; /* Centra las tarjetas */
     width: 200px;
-    margin-left: 90px
-
 
 }
+.grid-item:nth-child(2) {
+    background-color: #14142b; /* Cambia este color al que prefieras */
+}
+
 
 .grid-text h3, .grid-item1 h3 {
     color: #b0b0b0; /* Color para el subtítulo */
@@ -397,25 +402,36 @@ hr.solid{
     margin-top: 10px; /* Ajusta el espacio superior */
     border: 2px solid rgba(123, 74, 226, 0.3); /* Bordes de color */
     border-radius: 10px; /* Bordes redondeados */
-    
+    background-color: #14142b; /* Fondo oscuro */  
 }
 
 .grid-item1 {
     padding: 20px;
-    background-color: #090e16; /* Fondo oscuro */
+    background-color: #14142b; /* Fondo oscuro */
     color: white;
     text-align: center;
     border-radius: 10px; /* Bordes redondeados */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 0 15px rgba(20, 20, 43, 0.102); /* Sombra */
+
 }
 
 .grid-item1:hover {
     transform: translateY(-10px);
-    background-color: #7648d7; /* Cambia el color de fondo al hacer hover */
+    background-color: #c52dda; /* Cambia el color de fondo al hacer hover */
     box-shadow: 0 0 25px rgba(123, 74, 226, 0.5); /* Aumenta la sombra */
 }
 
 .grid-item1:hover h2, .grid-item1:hover h3 {
     color: white; /* Cambia el color del texto al hacer hover */
 }
+
+hr.solido{
+
+    border-top: 1px solid #7B4AE2;
+    margin-top: 1px;
+    border-color: rgba(104, 69, 184, 0.2);
+}
+
+
+/* Seccion de sobre mi*/
