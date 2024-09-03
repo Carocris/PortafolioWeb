@@ -4,12 +4,12 @@
 }
 
 body {
-    background-color: #090e16; 
-    color: #FFFFFF; 
+    background-color: #090e16;
+    color: #FFFFFF;
     font-family: 'Arial', sans-serif;
     width: 100%;
     height: 100vh;
-    box-sizing: border-box;        
+    box-sizing: border-box;
 }
 
 nav {
@@ -21,12 +21,12 @@ nav {
     padding-left: 1.5%;
     padding-right: 1.5%;
     font-weight: bold;
-    background-color: rgb(15,17,32);   
+    background-color: rgb(15, 17, 32);
     border-radius: 10px;
     margin-left: 100px;
     margin-right: 120px;
     margin-top: 25px;
-    
+
 }
 
 nav ul {
@@ -47,10 +47,11 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #442e80; /* Color del texto en hover y cuando está activo */
+    color: #442e80;
+    /* Color del texto en hover y cuando está activo */
 }
 
-a{
+a {
     color: #7648d7;
     text-decoration: none;
 }
@@ -61,7 +62,7 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 50px 100px;
-    background-color: rgb(9,14,22);
+    background-color: rgb(9, 14, 22);
     margin-top: 150px;
 }
 
@@ -77,11 +78,11 @@ a{
 
 .saludo-container {
     margin-bottom: 10px;
-    margin-top: 20px;   
+    margin-top: 20px;
 }
 
 .saludo-text {
-    margin-top: 20px;   
+    margin-top: 20px;
     margin: 0 0 15px;
     font-size: 16px;
     color: rgb(123, 74, 226);
@@ -93,8 +94,10 @@ a{
 }
 
 .saludo-text:hover {
-    transform: scale(1.20); /* Efecto hover */
-    box-shadow: 0 10px 20px rgba(12, 28, 28, 0.3); /* Sombra para resaltar */
+    transform: scale(1.20);
+    /* Efecto hover */
+    box-shadow: 0 10px 20px rgba(12, 28, 28, 0.3);
+    /* Sombra para resaltar */
 }
 
 .hand-wave {
@@ -103,21 +106,39 @@ a{
 }
 
 .saludo-text:hover .hand-wave {
-    animation: wave 0.6s ease-in-out infinite; /* Anima la mano solo cuando se hace hover */
+    animation: wave 0.6s ease-in-out infinite;
+    /* Anima la mano solo cuando se hace hover */
 }
 
 @keyframes wave {
-    0% { transform: rotate(0deg); }
-    20% { transform: rotate(-15deg); }
-    40% { transform: rotate(10deg); }
-    60% { transform: rotate(-10deg); }
-    80% { transform: rotate(15deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    80% {
+        transform: rotate(15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 
-.presentacion{
-    padding: 10px 0 0 ;
+.presentacion {
+    padding: 10px 0 0;
     color: #84878b;
 }
 
@@ -127,14 +148,19 @@ a{
 }
 
 .icons a {
-    color: #808080; /* Color gris */
-    margin-right: 7px; /* Espacio entre los iconos */
-    font-size: 24px; /* Tamaño de los iconos */
-    transition: color 0.3s ease; /* Efecto de transición para el cambio de color */
+    color: #808080;
+    /* Color gris */
+    margin-right: 7px;
+    /* Espacio entre los iconos */
+    font-size: 24px;
+    /* Tamaño de los iconos */
+    transition: color 0.3s ease;
+    /* Efecto de transición para el cambio de color */
 }
 
 .icons a:hover {
-    color: #A9A9A9; /* Gris más claro al pasar el mouse por encima */
+    color: #A9A9A9;
+    /* Gris más claro al pasar el mouse por encima */
 }
 
 .home-image-container {
@@ -145,13 +171,18 @@ a{
     width: 270px;
     height: 270px;
     margin: 0 auto;
+
 }
 
 .home-image-container img {
-    border-radius: 100%; /* Hace la imagen redonda */
-    width: 150%; /* Asegura que la imagen ocupe todo el contenedor */
+    border-radius: 100%;
+    /* Hace la imagen redonda */
+    width: 150%;
+    /* Asegura que la imagen ocupe todo el contenedor */
     height: auto;
-    z-index: 1; /* Asegura que la imagen esté por encima de cualquier fondo o ícono */
+    z-index: 1;
+    /* Asegura que la imagen esté por encima de cualquier fondo o ícono */
+
 }
 
 .home-image-container::before {
@@ -159,20 +190,27 @@ a{
     position: absolute;
     width: 400px;
     height: 400px;
-    background-color: rgba(115, 16, 255, 0.15); /* Color de fondo morado con opacidad */
-    border-radius: 50%; /* Círculo */
+    background-color: rgba(115, 16, 255, 0.15);
+    /* Color de fondo morado con opacidad */
+    border-radius: 50%;
+    /* Círculo */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centra el círculo */
-    z-index: 1; /* Coloca el círculo detrás de la imagen */
+    transform: translate(-50%, -50%);
+    /* Centra el círculo */
+    z-index: 1;
+    /* Coloca el círculo detrás de la imagen */
     box-shadow: 0 0 80px 18px rgba(98, 0, 234, 0.5);
 
 }
 
 .icono-bg {
-    background-color: rgba(41, 40, 40, 0.5); /* Gris semitransparente */
-    border-radius: 50%; /* Círculo perfecto */
-    padding: 20px; /* Espacio interno para dar la apariencia de círculo alrededor del icono */
+    background-color: rgba(41, 40, 40, 0.5);
+    /* Gris semitransparente */
+    border-radius: 50%;
+    /* Círculo perfecto */
+    padding: 20px;
+    /* Espacio interno para dar la apariencia de círculo alrededor del icono */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,15 +218,24 @@ a{
 
 
 /* Posición y Tamaño en Pantallas Grandes (Desktop) */
+
 .icono-flotante {
     position: absolute;
     z-index: 3;
-    transition: transform 0.5s ease; /* Añade una transición suave */
+    transition: transform 0.5s ease;
+    /* Añade una transición suave */
 }
 
+.icono-bg:hover {
+    background-color: #ccc5db;
+    box-shadow: 0 0 15px 10px #684fa0;
+}
 
-.icono-flotante:hover {
-    transform: rotate(360deg); /* Gira el ícono 360 grados */
+.icono-bg:hover {
+    animation: rotar 1.5s linear infinite;
+    /* Rota en 2 segundos de manera infinita */
+    transform: rotate(360deg);
+    /* Gira el ícono 360 grados */
 }
 
 /* Posición del icono de React */
@@ -210,10 +257,103 @@ a{
 }
 
 /* Tamaño de íconos en pantallas grandes */
-.react-icon-size, .java-icon-size, .figma-icon-size {
+.react-icon-size,
+.java-icon-size,
+.figma-icon-size {
     width: 50px;
     height: 50px;
 }
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Iconos Responsividad para pantallas grandes*/
+
+@media (max-width: 1920px) and (min-width: 13px) {
+
+    .icono-flotante {
+        position: absolute;
+        z-index: 3;
+        transition: transform 0.5s ease;
+        /* Añade una transición suave */
+    }
+
+    /* Posición del icono de React */
+    .react-icon {
+        top: 26%;
+        right: 57%;
+    }
+
+    /* Posición del icono de Java */
+    .java-icon {
+        top: 40%;
+        right: 40%;
+    }
+
+    /* Posición del icono de Figma */
+    .figma-icon {
+        top: 50%;
+        left: 38%;
+    }
+
+    .react-icon-size,
+    .java-icon-size,
+    .figma-icon-size {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Iconos Responsividad para pantallas (Laptops) */
+
+@media (max-width: 1920px) {
+
+    .icono-flotante {
+        position: absolute;
+        z-index: 3;
+        transition: transform 0.5s ease;
+        /* Añade una transición suave */
+    }
+
+    /* Posición del icono de React */
+    .react-icon {
+        top: 29%;
+        right: 56%;
+    }
+
+    /* Posición del icono de Java */
+    .java-icon {
+        top: 50%;
+        right: 37%;
+    }
+
+    /* Posición del icono de Figma */
+    .figma-icon {
+        top: 59%;
+        left: 34%;
+    }
+
+    .react-icon-size,
+    .java-icon-size,
+    .figma-icon-size {
+        width: 50px;
+        height: 50px;
+    }
+
+
+
+
+}
+
+
 
 /* Iconos Responsividad para pantallas medianas (Tablets) */
 @media (max-width: 1070px) {
@@ -226,21 +366,26 @@ a{
 
     .react-icon {
         top: 70%;
-        right: 50%; /* Ajusta para centrar el icono */
+        right: 50%;
+        /* Ajusta para centrar el icono */
     }
 
     .java-icon {
         top: 40%;
-        left: 10%; /* Ajusta para centrar el icono */
+        left: 10%;
+        /* Ajusta para centrar el icono */
     }
 
     .figma-icon {
         top: 60%;
-        left: 50%; /* Ajusta para centrar el icono */
+        left: 50%;
+        /* Ajusta para centrar el icono */
     }
 
     /* Tamaño de íconos en pantallas medianas */
-    .react-icon-size, .java-icon-size, .figma-icon-size {
+    .react-icon-size,
+    .java-icon-size,
+    .figma-icon-size {
         width: 40px;
         height: 40px;
     }
@@ -266,39 +411,52 @@ a{
     }
 
     /* Tamaño de íconos en pantallas pequeñas */
-    .react-icon-size, .java-icon-size, .figma-icon-size {
+    .react-icon-size,
+    .java-icon-size,
+    .figma-icon-size {
         width: 40px;
         height: 40px;
     }
 }
 
 .home-image-container:hover .floating-icon {
-    transform: scale(1.2); /* Ampliar íconos al pasar el mouse por encima */
+    transform: scale(1.2);
+    /* Ampliar íconos al pasar el mouse por encima */
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra los botones horizontalmente */
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: 20px; /* Añade espacio arriba para bajarlo */
+    align-items: center;
+    /* Centra los botones horizontalmente */
+    gap: 10px;
+    /* Espacio entre los botones */
+    margin-top: 20px;
+    /* Añade espacio arriba para bajarlo */
 }
 
 .button-download {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el contenido dentro del botón */
-    color: #7f62be; /* Color del texto */
-    background-color: transparent; /* Fondo transparente */
-    border: none; /* Sin borde */
-    padding: 10px 0; /* Ajusta el padding para el tamaño del botón */
+    justify-content: center;
+    /* Centra el contenido dentro del botón */
+    color: #7f62be;
+    /* Color del texto */
+    background-color: transparent;
+    /* Fondo transparente */
+    border: none;
+    /* Sin borde */
+    padding: 10px 0;
+    /* Ajusta el padding para el tamaño del botón */
     font-weight: bold;
     font-size: 16px;
     text-decoration: none;
-    width: 200px; /* Asegura que ambos botones tengan el mismo ancho */
-    text-align: center; /* Centra el texto dentro del botón */
+    width: 200px;
+    /* Asegura que ambos botones tengan el mismo ancho */
+    text-align: center;
+    /* Centra el texto dentro del botón */
     margin-left: 100px;
-    
+
 }
 
 .button-container i {
@@ -308,30 +466,38 @@ a{
 }
 
 .button-whatsapp {
-    background-color: rgba(104, 69, 184, 0.1);  /* Fondo del botón de WhatsApp */
+    background-color: rgba(104, 69, 184, 0.1);
+    /* Fondo del botón de WhatsApp */
     color: #7f62be;
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el contenido dentro del botón */
-    width: 200px; /* Asegura que ambos botones tengan el mismo ancho */
+    justify-content: center;
+    /* Centra el contenido dentro del botón */
+    width: 200px;
+    /* Asegura que ambos botones tengan el mismo ancho */
     margin-top: -10px;
 }
 
-.button-download:hover, .button-download:hover i {
-    color: #c1b2e6; /* Color del texto e icono al pasar el mouse */
+.button-download:hover,
+.button-download:hover i {
+    color: #c1b2e6;
+    /* Color del texto e icono al pasar el mouse */
 }
 
-.button-whatsapp:hover, .button-whatsapp:hover i {
-    background-color: #7121cc; /* Color del fondo al pasar el mouse */
-    color: white; /* Cambia el color del texto y del icono al pasar el mouse */
+.button-whatsapp:hover,
+.button-whatsapp:hover i {
+    background-color: #7121cc;
+    /* Color del fondo al pasar el mouse */
+    color: white;
+    /* Cambia el color del texto y del icono al pasar el mouse */
 }
 
 /* Solid border */
 
-hr.solid{
+hr.solid {
 
     border-top: 1px solid #7B4AE2;
     margin-top: 80px;
@@ -340,55 +506,79 @@ hr.solid{
 
 .grid-section {
     display: grid;
-    grid-template-columns: repeat(3, 240px); /* Fija el ancho de las tarjetas */
-    justify-content: center; /* Centra las columnas */
-    column-gap: 50px !important; /* Espacio horizontal entre columnas */
-    padding: 60px ; /* Espaciado interno de la sección */
+    grid-template-columns: repeat(3, 240px);
+    /* Fija el ancho de las tarjetas */
+    justify-content: center;
+    /* Centra las columnas */
+    column-gap: 50px !important;
+    /* Espacio horizontal entre columnas */
+    padding: 60px;
+    /* Espaciado interno de la sección */
     gap: 10px;
 
 
 }
 
-.grid-item { /* Reutiliza las mismas clases para los de abajo */
+.grid-item {
+    /* Reutiliza las mismas clases para los de abajo */
     background-color: #090e16;
     color: white;
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px ;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-    border: 2px solid rgba(123, 74, 226, 0.3); /* Borde de color */
-    margin: 0 auto; /* Centra las tarjetas */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transición suave */
+    border: 2px solid rgba(123, 74, 226, 0.3);
+    /* Borde de color */
+    margin: 0 auto;
+    /* Centra las tarjetas */
     width: 200px;
 
 }
+
 .grid-item:nth-child(2) {
-    background-color: #14142b; /* Cambia este color al que prefieras */
+    background-color: #14142b;
+    /* Cambia este color al que prefieras */
 }
 
 
-.grid-text h3, .grid-item1 h3 {
-    color: #b0b0b0; /* Color para el subtítulo */
+.grid-text h3,
+.grid-item1 h3 {
+    color: #b0b0b0;
+    /* Color para el subtítulo */
     font-size: 18px;
     margin-bottom: 10px;
 }
 
-.grid-text h2, .grid-item1 h2 {
-    color: white; /* Color del título */
+.grid-text h2,
+.grid-item1 h2 {
+    color: white;
+    /* Color del título */
     font-size: 24px;
     font-weight: bold;
 }
 
 .icon-container i {
-    font-size: 50px; /* Tamaño del ícono */
-    color: #7B4AE2; /* Color del ícono */
-    margin-bottom: 20px; /* Espacio debajo del ícono */
+    font-size: 50px;
+    /* Tamaño del ícono */
+    color: #7B4AE2;
+    /* Color del ícono */
+    margin-bottom: 20px;
+    /* Espacio debajo del ícono */
 }
 
-.grid-item:hover, .grid-item1:hover, .grid-items:hover {
-    transform: scale(1.05); /* Efecto hover */
-    transform: translateY(-10px); /* Eleva el ítem cuando se pasa el mouse por encima */
-    box-shadow: 0 0 25px rgba(123, 74, 226, 0.5); /* Aumenta la sombra */
+.grid-item:hover,
+.grid-item1:hover,
+.grid-items:hover {
+    transform: scale(1.05);
+    /* Efecto hover */
+    transform: translateY(-10px);
+    /* Eleva el ítem cuando se pasa el mouse por encima */
+    box-shadow: 0 0 25px rgba(123, 74, 226, 0.5);
+    /* Aumenta la sombra */
 }
 
 /* Lado de abajo */
@@ -396,37 +586,50 @@ hr.solid{
 .grid-items {
     display: grid;
     grid-column: span 3;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas de igual tamaño */
     gap: 10px;
-    padding: 0px; /* Elimina el padding para evitar diferencias de altura */
-    margin-top: 10px; /* Ajusta el espacio superior */
-    border: 2px solid rgba(123, 74, 226, 0.3); /* Bordes de color */
-    border-radius: 10px; /* Bordes redondeados */
-    background-color: #14142b; /* Fondo oscuro */  
+    padding: 0px;
+    /* Elimina el padding para evitar diferencias de altura */
+    margin-top: 10px;
+    /* Ajusta el espacio superior */
+    border: 2px solid rgba(123, 74, 226, 0.3);
+    /* Bordes de color */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    background-color: #14142b;
+    /* Fondo oscuro */
 }
 
 .grid-item1 {
     padding: 20px;
-    background-color: #14142b; /* Fondo oscuro */
+    background-color: #14142b;
+    /* Fondo oscuro */
     color: white;
     text-align: center;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
+    /* Bordes redondeados */
     transition: transform 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 0 15px rgba(20, 20, 43, 0.102); /* Sombra */
+    box-shadow: 0 0 15px rgba(20, 20, 43, 0.102);
+    /* Sombra */
 
 }
 
 .grid-item1:hover {
     transform: translateY(-10px);
-    background-color: #c52dda; /* Cambia el color de fondo al hacer hover */
-    box-shadow: 0 0 25px rgba(123, 74, 226, 0.5); /* Aumenta la sombra */
+    background-color: #c52dda;
+    /* Cambia el color de fondo al hacer hover */
+    box-shadow: 0 0 25px rgba(123, 74, 226, 0.5);
+    /* Aumenta la sombra */
 }
 
-.grid-item1:hover h2, .grid-item1:hover h3 {
-    color: white; /* Cambia el color del texto al hacer hover */
+.grid-item1:hover h2,
+.grid-item1:hover h3 {
+    color: white;
+    /* Cambia el color del texto al hacer hover */
 }
 
-hr.solido{
+hr.solido {
 
     border-top: 1px solid #7B4AE2;
     margin-top: 1px;
@@ -437,45 +640,103 @@ hr.solido{
 
 .about-section {
     background-color: #0c0f16;
-    padding: 50px;
+    padding: 100px;
     color: white;
+    margin-left: 100px;
 }
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 30px; /* Espacio entre la imagen y el texto */
+    gap: 100px;
+    /* Espacio entre la imagen y el texto */
 }
 
-.about-image img {
-    border-radius: 50%;
-    width: 200px; /* Tamaño de la imagen */
-    height: 200px;
-    object-fit: cover;
+.about-image {
+    position: relative;
+    display: inline-block;
 }
+
+.circle-bg {
+    width: 350px; /* Ajusta el tamaño según sea necesario */
+    height: 350px;
+    background-color: rgb(219, 207, 207);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.circle-bg img {
+    width: 450px;    /* Ajusta el tamaño de la imagen */
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del círculo */
+}
+
+.circle-bg:hover{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 40px 10px rgba(17, 62, 185, 0.5);}
 
 .about-content {
-    max-width: 600px; /* Ajusta el ancho máximo del texto */
+    max-width: 670px;
+    /* Ajusta el ancho máximo del texto */
 }
 
 .about-label {
-    background-color: #7B4AE2;
-    color: white;
+    background-color: #14142b;
+    color: rgb(123, 74, 226, 0.9);
     padding: 8px 16px;
-    border-radius: 19px;
+    border-radius: 10px;
     display: inline-block;
     margin-bottom: 10px;
     font-size: 14px;
     text-align: center;
 }
 
+.about-label:hover{
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 40px 10px rgba(17, 62, 185, 0.5);}
+
 .about-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .about-content p {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 15px;
     line-height: 1.6;
+    color: #9399a5;
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.about-label .genialspan {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1E1E2F;
+    border-radius: 10px;
+    color: #7B4AE2;
+    font-weight: bold;
+    animation: bounce 2s infinite; /* Aplica la animación */
+}
+
+.genial {
+    display: inline-block;
+    margin-right: 5px;
+    animation: bounce 2s infinite; /* Aplica la animación al emoji también */
+}
+
