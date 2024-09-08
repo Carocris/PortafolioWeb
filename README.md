@@ -1,2 +1,2 @@
 # PortafolioWeb
-Portafolio donde demuestro mis experiencias, conocimientos y habilidades.
+Portafolio donde demuestro mis experiencias, conocimientos y habilidades

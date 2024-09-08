@@ -48,7 +48,6 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
     color: #442e80;
-    /* Color del texto en hover y cuando está activo */
 }
 
 a {
@@ -649,7 +648,6 @@ hr.solido {
     display: flex;
     align-items: center;
     gap: 100px;
-    /* Espacio entre la imagen y el texto */
 }
 
 .about-image {
